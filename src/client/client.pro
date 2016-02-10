@@ -4,6 +4,8 @@ MODULE = waylandclient
 QT += core-private gui-private
 QT_FOR_PRIVATE += platformsupport-private
 
+MODULE=waylandclient
+
 # We have a bunch of C code with casts, so we can't have this option
 QMAKE_CXXFLAGS_WARN_ON -= -Wcast-qual
 
@@ -121,5 +123,7 @@ CONFIG += generated_privates
 MODULE_PLUGIN_TYPES = \
             wayland-graphics-integration-client \
             wayland-inputdevice-integration \
-            wayland-decoration-client
+            wayland-decoration-client \
+            wayland-shell-integration
+
 load(qt_module)
